@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet"href="form.css">
+	<link rel="stylesheet"href="style.css">
+	<title>Form</title>
+</head>
+	<body background="images/formbc.jfif" id="body">
+		<ul>
+			<li style="display: inline;"><a href="index.html">Home</a></li>
+			
+			<li style="display: inline;"><a href="Blog.html">Blog</a></li>
+			<li style="display: inline;"><a href="CV.html">CV</a></li>
+			<li style="display: inline;"class="active"><a href="Form.html">Contact</a></li>
+		</ul>
+				<br><br><br>
+		<div class="wrapper">
+				<h2>HEllO</h2>
+				<h2>contact me if you you want to join my guild!!!!</h2>
+
+
+				<!-- label tag is used to label several elements. -->
+			<form id="myform" action="Message.html"  onsubmit="return validateform()">
+				<label>First Name</label>
+					<input type="text" name="FirstName" placeholder="Enter your First Name" id="fname"><br>
+				<label>Last Name</label>
+					<input type="text" name="LastName" placeholder="Enter your Last Name" id="lname"><br>
+				<label>phone Number</label>
+					<input type="text" name="PhoneNumber" placeholder="Enter your Phone Number" id="phone"><br>
+				<label>UID</label>
+					<input type="text" name="uid" placeholder="Enter your uid" id="uid"><br>
+
+						<!-- form tag is used to create html form taking user input. -->
+				<label>Gender:</label>
+					<input type="radio" Name="Gender" value="male" id="male" id="male">	
+
+					<!-- radio type define radio button which is used to choose single instruciton among group -->
+
+				<label for="male"> male</label>
+					<input type="radio" Name="Gender" value="female" id="female">
+				<label for="female">female </label><br>
+
+				<label>Address</label>
+					<select id="selection">	<!-- select tags to create dropdown menu. -->
+						<option value="select">select</option>
+						<option>Dharan</option>
+						<option>Itahari</option>
+						<option>Biratnagar</option>
+						<option>Damak</option>
+						<option>ktm</option>
+						<option>Other</option>
+					</select><br>
+							  
+				<label for="Queries">Queries</label>
+					<textarea colums="80" rows="6" id="queries" name="Queries" placeholder="Write down your questions...."></textarea><br>
+					<input type="submit" class="form-control" value="submit">
+		   </form>
+	   </div>
+	   	<!-- Code for validation of the form. -->
+			<script>
+				function validateform(){
+					 	var fname=document.getElementById("fname");
+					 	var lname=document.getElementById("lname");
+					 	var textarea=document.getElementById("queries");
+					 	var PhoneNumber=document.getElementById("phone").value;
+					   var email=document.getElementById("UID").value;
+					   var sl=document.getElementById("selection").value;
+					   var x=document.getElementById("male").checked;
+					   var y=document.getElementById("female").checked;
+					   
+
+					if (fname.value.trim()==""||lname.value.trim()==""||textarea.value.trim()=="") {
+						alert("Every field is mendotary!!. Please fill the form");
+						return false;
+					}
+					if(isNaN(PhoneNumber)||PhoneNumber.length!=10){
+						alert("Please enter the valid phone number");
+						return false;
+					}
+					if (email.length<6 && email.indexOf('@')==-1) {
+						alert("Please enter the valid UID");
+						return false;
+					}
+					if (sl== "select") {
+						alert("please select address");
+						return false;
+					}
+					if (x==false&& y==false) {
+						alert("Please select your Gender");
+						return false;
+					}
+
+					else{
+						return true;
+					 }
+				}
+			</script>
+
+			<div class="btn"></div>
+				 <button onclick="backgroundChange()">change background</button>
+				 <button onclick="previousbackground()">previous background</button>
+			</div>
+			<script>
+				function backgroundChange(){
+					document.getElementById("body").style.backgroundImage="url(images/blog.jpg)";
+				}
+				function previousbackground(){
+					document.getElementById("body").style.backgroundImage="url(images/formbc.jfif)";
+				}
+			</script><br><br>
+   </body>
+</html>
+

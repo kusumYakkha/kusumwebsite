@@ -1,0 +1,57 @@
+body{
+		margin: 0; /*margin is used to create space around element  */
+		padding: 0;
+		text-align: center;/*it is used to set alignmnet of text */
+		color: black;
+		background-size: cover;
+}
+	/*The content is made center with shadow of white color.*/
+	.wrapper{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			max-width: 450px;
+			width: 50%;
+			background: yellow;
+			padding: 25px;/*padding create space around element*/
+			border-radius: 5px;
+			box-shadow: 5px 10px white; /*it attachs shadows to elements*/
+	}
+
+	.message{
+			background-color: white;
+			padding: 10px;
+			border-radius: 5px;
+	}
+
+
+h2{
+	color: black;
+	text-transform: uppercase;
+}
+	 
+input[type=text],input[type=radio],select,text-area{
+	width: 20%
+	padding: 12px; 
+	border: 2px solid black; 
+	border-radius: 4px; 
+	box-sizing: border-box;  
+	margin-top: 6px; 
+	margin-bottom: 16px;
+	color: black;
+}
+
+input[type=submit]{
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;/*it specify decoration added to text */
+	margin-top: 14px;
+	margin-bottom: 6px;
+	cursor: pointer;
+	text-transform: uppercase;/*it change text into uppercase*/
+	box-shadow: 4px 4px white;
+}
+	 

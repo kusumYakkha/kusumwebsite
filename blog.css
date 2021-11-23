@@ -1,0 +1,11 @@
+	.left-column{
+		float: left;
+		width: 75%;
+	}
+
+h3{
+	color: white; 
+	padding: 10px; 
+	background-color: black;
+	margin: 0;
+}

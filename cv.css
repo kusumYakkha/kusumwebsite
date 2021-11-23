@@ -1,0 +1,31 @@
+body{
+	background-image: url("images/blog.jpg");
+}
+
+	.container{
+		display: flex;/*display an element as block-level flex*/
+	}
+
+	.text {
+  		font-size: 18px;/* it increase size of font*/
+  		padding-left: 25px;
+	}
+
+	.left-column{
+		float: left;
+		width: 40%;
+	}
+
+	.right-column{
+		float: right;
+		width:40%;
+		padding-left:  60px;
+	}
+
+h3{
+	text-align: center;/* it keeps text in center.*/
+	background-color: black;
+	width: 30%;
+	color:  #ffbb33 ;
+}
+
